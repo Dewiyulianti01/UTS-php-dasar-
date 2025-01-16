@@ -14,8 +14,6 @@
     $no = 1
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +27,8 @@
 </head>
 <body>
     <div class="container"> 
-    <h1 class="text-center"> Data Mahasiswa KA 2021 </h1>   
+    <h1 class="text-center"> Data Mahasiswa KA 2021 </h1>  
+    <a href="tugas9_tambah_mahasiswa.php" class="btn btn-primary">Tambah</a> 
     <table class="table table-bordered table-hover">
         <tr>
             <th> No </th>
