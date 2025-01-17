@@ -42,7 +42,11 @@
                 <td><?= $row['nim']; ?></td>
                 <td><?= $row['nama']; ?></td>
                 <td><?= $row['name']; ?></td>
-                  
+                <td>
+                    <a href="tugas10_edit.php?nim=<?= $row['nim']?>" class="btn btn-success">Edit</a>
+                    <a href="tugas10_hapus.php?nim=<?= $row['nim']?>" class="btn btn-danger"
+                        onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini ?');">Hapus</a>
+                </td>  
         </tr>
         <?php } ?>
     </table>  
