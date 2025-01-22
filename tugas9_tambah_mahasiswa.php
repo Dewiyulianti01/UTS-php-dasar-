@@ -1,6 +1,11 @@
 <?php
      session_start();
-
+     if (!isset($_SESSION['login'])) {
+        if ($_SESSION['login'] != true) {
+            header("Location: login.php");
+            exit;
+        }
+    }
     $mysqli = new mysqli('localhost', 'root', '', 'tedc');
 
     $program_Studi = $mysqli->query("Select * from studi_program");
@@ -51,6 +56,7 @@
     </div>
     <div class="mt-3">
         <button type="submit" class="btn btn-primary">Sumbit</button>
+        <a href="logout.php" class="btn btn-warning">Logout</a>
         <a href="Mahasiswa.php" class="btn btn-warning">Cancel</a>
             </div>
     </form>
