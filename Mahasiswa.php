@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
    
 
     $mysqli = new mysqli('localhost', 'root', '', 'tedc');
@@ -28,6 +30,11 @@
 <body>
     <div class="container"> 
     <h1 class="text-center"> Data Mahasiswa KA 2021 </h1>  
+    <?php if (isset($_SESSION['success']) && $_SESSION['success'] == true ) { ?>
+       <div class="alert alert-success" role="alert">
+            <?= $_SESSION['message'] ?>
+       </div>
+       <?php } ?>
     <a href="tugas9_tambah_mahasiswa.php" class="btn btn-primary">Tambah</a> 
     <table class="table table-bordered table-hover">
         <tr>
@@ -53,3 +60,9 @@
     </div>     
 </body>
 </html>
+
+<?php
+unset($_SESSION['success']);
+unset($_SESSION['message']);
+
+?>
