@@ -2,7 +2,6 @@
     session_start();
 
    
-
     $mysqli = new mysqli('localhost', 'root', '', 'tedc');
     $result = $mysqli->query("SELECT students.nim, students.nama, studi_program.name
     FROM students INNER JOIN studi_program ON students.studi_program_id = studi_program.studi_program_id ");

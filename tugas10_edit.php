@@ -55,7 +55,7 @@
         <div class="mt-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="mahasiswa.php" class="btn btn-warning">Cancel</a>
-         </div>s
+         </div>
     </form>   
 </body>
 </html>
